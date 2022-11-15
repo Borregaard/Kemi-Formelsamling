@@ -1,0 +1,645 @@
+\documentclass[a4paper, 11pt, twocolumn]{report}
+
+\input{utilities/preamble}
+\input{utilities/macros}
+\input{utilities/letterfonts}
+
+\title{\Huge{Kemi}\\Formelsamling}
+\author{
+  \Large{Frederik Guldfeldt Borregaard}\\
+  \Large{og Johan Holst}\\
+  }
+
+\date{\today}
+
+\pagestyle{fancy}
+\fancyhead[L]{Frederik og Johan}
+\fancyhead[C]{Kemi - formelsamling}
+\fancyhead[R]{November - 2022} 
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\onecolumn
+\tableofcontents
+
+\twocolumn
+\pagebreak
+
+\chapter{Formler og tabler}
+
+\begin{table}[]
+    \begin{tabular}{ l l l}
+    \multicolumn{3}{l}{\textbf{Konstanter}} \\
+        \hline  
+        $N_a$ & Avogradrokonstanten & $( 6,022 * 10^{23} \text{mol}^{-1} )$ \\
+        $R$ & gaskonstanten & $( 8,314 \text{J/(mol $\cdot$ K)} )$ \\
+        $m_e$ & elektronens masse & $( 9,11 * 10^{-31} \text{kg} )$ \\
+        $m_p$ & protonens masse & $( 1,673 * 10^{-27} \text{kg} )$ \\
+        $m_n$ & neutronens masse & $( 1,675 * 10^{-27} \text{kg} )$ \\
+        $c$ & lysets fart & $(3,00 *10^8 \text{m/s} )$ \\
+        $h$ & Planck-konstanten & $( 6,63 * 10^{-34} \text{J $\cdot$ s} )$ \\
+        $e$ & elementarladningen & $( 1,602 * 10^{-19} \text{C} )$ 
+    \end{tabular}
+    \caption{Konstanter}
+\end{table}
+
+\begin{table}[]
+    \begin{tabular}{ l l l}
+    \multicolumn{3}{l}{\textbf{Dekadiske præfikser}} \\
+        \hline  
+        $T$ & tera & $10^{12}$ \\
+        $G$ & giga & $10^{9}$ \\
+        $M$ & mega & $10^{6}$ \\
+        $k$ & kilo & $10^{3}$ \\
+        $h$ & hekto & $10^{2}$ \\
+        $da$ & deka & $10^{1}$ \\
+        $d$ & deci & $10^{-1}$ \\
+        $c$ & centi & $10^{-2}$ \\
+        $m$ & milli & $10^{-3}$ \\
+        $\mu$ & mikro & $10^{-6}$ \\
+        $n$ & nano & $10^{-9}$ \\
+        $p$ & pico & $10^{-12}$ \\
+        $f$ & femto & $10^{-15}$ \\
+        $a$ & atto & $10^{-18}$ 
+    \end{tabular}
+    \caption{Dekadiske præfikser}
+\end{table}
+
+\begin{table}[]
+    \begin{tabular}{ l l l}
+    \multicolumn{3}{l}{\textbf{Kemisk mængdeberegninger}} \\
+        \hline  
+        $m$ & masse & $(\text{g})$ \\
+        $M$ & molar masse & $(\text{g} / \text{mol})$ \\
+        $n$ & stofmængde & $(\text{mol})$ \\
+        $p$ & tryk & $(\text{Pa eller bar})$ \\
+        $V$ & volumen & $(\text{L eller m}^3)$ \\
+        $T$ & kelvintemperatur & $(\text{K})$ \\
+        $c_A$ & koncentration & $(\text{mol} / \text{L}))$ 
+    \end{tabular}
+    \caption{Kemisk mængdeberegninger}
+\end{table}
+
+\begin{flalign}
+    m = n * M &&
+\end{flalign}
+Massen af en given stofmængde er lig med produktet af stofmængden og stoffets molare masse.
+
+\begin{flalign}
+    [A] = \frac{n_A}{V} &&
+\end{flalign}
+Dem aktuelle koncentration af $A$ i en opløsning er lig med stofmængden af $A$ divideret med opløsningens volumen. Koncentration har enheden mol/L, der også skrives $M$.
+
+\begin{flalign}
+    x_A = \frac{n_a}{n_{total}} &&
+\end{flalign}
+Molbrøken for en given stofmængde af en gas er lig med produktet af stofmængden og det molare volumen. Ved 20 $^{\circ}$C og 101 kPa er det molare volumen $24,1$ L/mol.
+
+\begin{flalign}
+    p*V=n*R*T &&
+\end{flalign}
+For et lukket system bestående af en idealgas eller en blanding af ideale gasser er produktet af systemets tryk og systemets volumen lig med produktet af stofmængde, gaskonstanten og kelvintemperaturen.
+
+\begin{flalign}
+    p_A = x_A * P_{total} = \frac{n_a}{n_{total}} * P_{total} &&
+\end{flalign}
+Partialtrykket af et stof $A$ i en gasblanding er lig med stoffets molbrøk gange partialtrykket.
+
+\chapter{Termodynamik}
+\section{Formler}
+
+\begin{table}[H]
+    \begin{tabular}{ l l l}
+    \multicolumn{3}{l}{\textbf{Termodynamik}} \\
+        \hline  
+        $H$ & entalpi & $(\text{J})$ \\
+        $H_m$ & molar entalpi & $(\text{J}/\text{mol})$ \\
+        $S$ & entropi & $(\text{J}/\text{K})$ \\
+        $S_m$ & molar entropi & $(\text{J}/\text{K}*\text{mol})$ \\
+        $G$ & Gibbs-energi & $(\text{J})$ \\
+        $G_m$ & molar Gibbs-energi & $(\text{J}/\text{mol})$ \\
+        $Q$ & varmemængde & $(\text{J})$ \\
+        $m$ & masse & $(\text{g})$ \\
+        $c$ & specifik varmefylde & $(\text{J}/\text{g}*\text{K})$ og \\ 
+        $ $ & $ $ & $(\text{J}/\text{mol}*\text{K})$ \\
+        $T$ & kelvintempertur & $(\text{K})$ \\
+        $Y$ & reaktionsbrøk & $(\text{afhængig}$ \\ 
+        $ $ & $ $ & $\text{af koefficienterne})$ \\
+        $K$ & ligevægtskonstant & $(\text{afhængig}$ \\ 
+        $ $ & $ $ & $\text{af koefficienterne})$ \\\\
+
+        \multicolumn{3}{l}{\textbf{Supplerende tegn}} \\
+        \hline
+        $\Delta$ & betyder "tilvækst" \\
+        \multicolumn{1}{l}{$\standardstate$} & \multicolumn{2}{l}{angiver at der tale om en standardværdi}
+        
+    \end{tabular}
+    \caption{Symboler og deres enheder}
+    \label{tab:termodynamik_table}
+\end{table}
+
+
+\begin{flalign}
+    Q=m * c*\Delta T \nonumber && 
+\end{flalign}
+Den varmemængde, der tilføres et system, er lig med produktet af systemets masse, systemets specifikke varmekapacitet og systemets temperaturstigning
+
+\begin{flalign}
+    \Delta E_{indre}=Q+A \nonumber && 
+\end{flalign}
+Termodynamikkens 1. hovedsætning. Tilvæksten i et systems indre energi er summen af den tilførte varme og det arbejde, der er udført på systemet. Positive Q og A betyder tilførsel af energi til systemet
+
+\begin{flalign}
+    \Delta S_{univers}=\Delta S_{sys}+\Delta S_{omg}\geq 0 \nonumber && 
+\end{flalign}
+Termodynamikkens 2. hovedsætning. For at en begivenhed, fx. en kemisk reaktion, kan forløbe spontant, skal universets samlede tilvækst i entropi være større eller lig med nul.
+
+\begin{flalign}
+    \Delta H_{m}^{\standardstate} & = \sum_{produkter} H_{m}^{\standardstate} - \sum_{reaktanter} H_{m}^{\standardstate} && \\
+    \Delta S_{m}^{\standardstate} & = \sum_{produkter} S_{m}^{\standardstate} - \sum_{reaktanter} S_{m}^{\standardstate} && \\
+    \Delta G_{m}^{\standardstate} & = \sum_{produkter} G_{m}^{\standardstate} - \sum_{reaktanter} G_{m}^{\standardstate} && 
+\end{flalign}
+Den molare tilvækst for en tilstandsfunktion ved standardbetingelserne er ved en kemisk reaktion lig med forskellen mellem summen af produkternes molare standardværdi minus summen af reaktanternes molare værdi. Det gælder for alle tilstandfunktionerne $H$, $S$ og $G$. Beregningen af tilvæksten foregår på samme måde ved andre vilkår end standardbetingelserne og for konkrete mængder. 
+
+\begin{flalign}
+    \Delta G_{m}^{\standardstate}=\Delta H_{m}^{\standardstate} - T*\Delta S_{m}^{\standardstate} && 
+\end{flalign}
+Tilvæksten i molar Gibbs-energi er i et system med konstant temperatur lig med tilvæksten i entalpi minus produktet af kelvintemperaturen og tilvæksten i systemets entropi. Beregningen af tilvæksten foregår på samme måde ved andre vilkår end standardbetingelserne og for konkrete mængder. $\Delta H-$ og $\Delta S-$funktionerne kan med rimelig tilnærmelse regnes som temperaturuafbængige. 
+
+\begin{flalign} 
+    \Delta G_{m} = \Delta G_{m}^{\standardstate} + R*T*\ln(Y) &&
+\end{flalign}
+I et system, hvor der ikke er ligevægt, er øjebliksværdien af den molare tilvækst i Gibbs-energien lig med tilvæksten i molar standard-Gibbs-energi plus produktet af gaskonstanten, kelvintemperaturen og den naturlige logaritme til reaktionsbrøken. 
+
+\begin{flalign}
+    b\, B + c\, C \rightleftharpoons d\, D + e\, E  && 
+\end{flalign}
+\begin{flalign}
+    Y=\frac{a_D^d*a_E^e}{a_B^b*a_C^c} &&
+\end{flalign}
+Reaktionsbrøken $Y$ for en reaktionsblanding bestående af B, C, D og E er lig med produktet af produkternes aktivitet divideret med produktet af reaktanternes aktivitet - alle med reaktionsskemaets koefficienter som eksponenter.
+I praksis udskiftes aktivitet på følgende måde: 
+\begin{itemize}
+    \item for gasser anvendes partialtrykket $p_{B}$ 
+    \item for sloffer opløst i vand anvendes den aktuelle koncentration [B] 
+    \item for opløsningsmidler anvendes molbrøken $x_{B}$
+\end{itemize}
+    
+\begin{flalign}
+    -\Delta G_{m}^{\standardstate} = R*T*\ln(K) &&
+\end{flalign}
+I et systemet, hvor der er ligevægt, er $\Delta G_{m}$ lig nul og reaktionsbrøken er lig ligevægtskonstanten. Det molare tab i standard-Gibbsenergi er lig med produktet af gaskonstanten, kelvintemperaturen og den naturlige logaritme til reaktionsbrøken. 
+
+\begin{flalign}
+    K = e^{\frac{ -\Delta G_{m}^{\standardstate}}{R*T}} = e^{\frac{ -\Delta H_{m}^{\standardstate}}{R*T}+\frac{\Delta S_{m}^{\standardstate}}{R}}
+\end{flalign}
+I et system, hvor der er ligevægt, er ligevægtskonstanten lig med eksponentialfunktionen til det molare tab i standard-Gibbsenergi divideret med gaskonstanten og med kelvintemperaturen. 
+
+\begin{flalign}
+    \ln(K) = \frac{ -\Delta H_{m}^{\standardstate}}{T} * \frac{1}{T} + \frac{\Delta S_{m}^{\standardstate}}{R}
+\end{flalign}
+Van't Hoff ligningen. $ln(K)$ kan med god nøjagtighed beregnes ved andre temperaturer, end den der gælder for tabelværdierne for entalpier og entropier. Det skyldes, af tilvæksterne $\Delta H$ og $\Delta S$ kan regnes for temperaturuafhængige. 
+
+\newpage
+\onecolumn
+\section{Eksempler}
+
+Alle eksempler i denne sektion er taget fra Basis kemi A.
+
+\ex{Beregning af molar tilvækst i standardentalpi}{
+På side 13 har vi set på forbrændingen af heptan:
+\vspace{-0.3cm}
+\begin{equation}
+    \ce{ C7H16(I) + 11O2(g) -> 7CO2(g) + 8H2O(I) } \nonumber
+\end{equation}
+Når man skal beregne den molare tilvækst i standardentalpi, forudsætter man, at reaktionen starter og slutter ved temperaturen 298 K. De molare standardentalpier for de enkelte stoffer i den kemiske reaktion slås op i en relevant tabel (se fx side 16 eller side 247) og skrives under de respektive stoffer.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccccccc}
+        ~ & $\ce{C7H16(I)}$ & + & $\ce{11O2(g)}$ & $\ce{->}$ & $\ce{7CO2(g)}$ & + & $\ce{8H2O(I)}$ \\ 
+        $\Delta H^{\standardstate}/(\text{kJ/mol})$ & -224,2 & ~ & 0 & ~ & -393,51 & ~ & -285,83 
+    \end{tabular}
+\end{table}
+\vspace{-0.3cm}
+Beregningen sker på følgende måde, idet vi husker at tage højde for koefficienterne i reaktionsskemaet:
+\begin{equation}
+    \Delta H^{\standardstate} = \{7*H^{\standardstate}(\ce{CO2(g)})+8*H^{\standardstate}(\ce{H2O(l)})\}-\{H^{\standardstate}(\ce{C7H16(L)})+11*H^{\standardstate}(\ce{O2(g)})\} \nonumber
+\end{equation}
+Værdierne indsættes:
+\begin{flalign}
+    \Delta H^{\standardstate} = \{7*H^{\standardstate}(-393,51\; \text{kJ/mol})+8*H^{\standardstate}(-285,83\; \text{kJ/mol})\}- \nonumber \\
+    \{H^{\standardstate}(-224,2\; \text{kJ/mol})+11*H^{\standardstate}(0\; \text{kJ/mol})\} 
+    =-4817,0 \text{kJ/mol} \nonumber
+\end{flalign}
+Bemærk, at den beregnede $\Delta H^{\standardstate} = -4817,0 kJ/mol$ angiver tilvæksten i standardentalpi pr. mol reaktion, eftersom vi har regnet på det afstemte reaktionsskema! Dvs. for hvert mol heptan, der forbrændes, og for hver 11 mol $\ce{O2}$, der medgår ved forbrændingen, vil der afgives $4817,0 kJ$ som varme til omgivelserne. Hvis der forbrændes 2 mol heptan, vil der selvfølgelig være en dobbelt så stor varmeafgivelse, nemlig $9634,0 kJ$. Når man beregneren molar tilvækst i standardentalpi, er resultatet knyttet til det reaktionsskema, der er angivet. Beregningerne viser, at $\Delta H^{\standardstate} < 0$ dvs. at reaktionen er exoterm ved standardbetingelserne og 298 K. Læg mærke til, at $H^{\standardstate}(\ce{O2(g)}) = 0 kJ/mol$, fordi der er tale om et grundstof i sin mest stabile form ved standardtilstanden $(p(\ce{O2}) = 1 bar)$. \\
+
+Beregningen herover gennemføres ved 298 K (25 °C), men al erfaring
+viser dog, at reaktionen i praksis sker ved langt højere temperatur.
+Denne problemstilling vender vi tilbage til på side 23.
+}
+
+\ex{Beregning af molar tilvækst i standardentalpi}{
+Beregn $\Delta H^{\standardstate}$ for reaktion
+\vspace{-0.2cm}
+\begin{equation}
+    \ce{NaCl(s) -> Na+(aq) + Cl-(aq)}\text{.}
+\end{equation}
+\textit{Løsning:} De molare standardentalpier for de enkelte stoffer slås op i en relevant
+tabel og skrives under de respektive stoffer:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccccc}
+        ~ & $\ce{NaCl(s)}$ & $\ce{->}$ & $\ce{Na+(aq) }$ & + & $\ce{Cl-(aq)}$ \\ 
+        $\Delta H^{\standardstate}/(\text{kJ/mol})$ & -411,2 & ~ & -240,34 & ~ & -167,08 
+    \end{tabular}
+\end{table}
+\vspace{-0.8cm}
+\begin{equation}
+    \Delta H^{\standardstate} = \{H^{\standardstate}(\ce{NaCl(s)})+H^{\standardstate}(\ce{Na+(aq)})\}-H^{\standardstate}(\ce{Cl-(aq)}) \nonumber
+\end{equation}
+Værdierne indsættes:
+\begin{equation}
+    \Delta H^{\standardstate} = \{H^{\standardstate}(-240,34\; \text{kJ/mol}\}+\{H^{\standardstate}(-167,08\; \text{kJ/mol})-H^{\standardstate}(-411,2\; \text{kJ/mol})\} = 3,78 \text{kJ/mol} \nonumber
+\end{equation}
+Da $\Delta H^{\standardstate} > 0 kJ/mol$, er reaktion (svagt) endoterm ved standardbetingelser og 298 K.
+}
+
+\ex{Beregning af molar tilvækst i standardentropi}{
+Lad os se på reaktionen:
+$$\ce{N2O4(g) -> 2NO2(g) }$$
+Værdierne for molar standardentropi findes i en relevant tabel og skrives under de respektive stoffer:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        ~ & $\ce{N2O4(g)}$ & $\ce{->}$ & $\ce{2NO2(g)}$ \\ 
+        $S^{\standardstate}/(\frac{\text{J}}{\text{mol $\cdot$ K}})$ & 304.4 & ~ & 240,1 
+    \end{tabular}
+\end{table}
+Beregning af den molare tilvækst i standardentropi sker på denne måde, idet vi husker at tage højde for koefficienterne i reaktionsskemaet:
+\begin{flalign}
+    \Delta S^{\standardstate} & = 2 * S^{\standardstate}(\ce{NO2(g)}) - S^{\standardstate}(\ce{N2O4(g)}) \nonumber \\
+    & = 2 * 240,1 \; (\frac{\text{J}}{\text{mol $\cdot$ K}}) - 304,4\; (\frac{\text{J}}{\text{mol $\cdot$ K}}) \nonumber \\
+    & = 175,8\; (\frac{\text{J}}{\text{mol $\cdot$ K}}) \nonumber
+\end{flalign}
+Man skal bemærke, at den beregnede $\Delta S^{\standardstate} = 175,8\; (\frac{\text{J}}{\text{mol $\cdot$ K}})$ angiver den molare tilvækst i standardentropi pr. mol reaktion, eftersom vi har regnet på det afstemte reaktionsskema. For denne reaktion er $\Delta S^{\standardstate} > 0$ ved standardbetingelser, hvilket er i overensstemmelse med, at antallet af gasmolekyler og dermed uordenen vokser ved reaktionen.}
+\ex{Beregning af molar tilvækst i standard Gibbs-energi}{
+Som eksempel ser vi først på dannelsen af ammoniak:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+        $\ce{3H_2(g)}$ & + &$\ce{N2(g)}$ & $\ce{->}$ & $\ce{2NH3(g)}$ \\ 
+        1 bar & ~ & 1 bar & ~ & 1 bar 
+    \end{tabular}
+\end{table}
+Værdierne for molar standard Gibbs-energi findes i en relevant tabel og skrives under de respektive stoffer:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccccc}
+        ~ & $\ce{3H_2(g)}$ & + &$\ce{N2(g)}$ & $\ce{->}$ & $\ce{2NH3(g)}$ \\ 
+        $\Delta G^{\standardstate}/(\text{kJ/mol})$ & 0 & ~ & 0 & ~ & -16,4 
+    \end{tabular}
+\end{table}
+Den molare tilvækst i standard Gibbs-energi ved 298 K beregnes, idet vi husker at tage hensyn til koefficienterne i reaktionsskemaet:
+\begin{flalign}
+    \vspace{0.3cm}
+    \Delta G^{\standardstate} & = 2 * G^{\standardstate}(\ce{NH3(g)}) - \{3 * G^{\standardstate}(\ce{H2(g)}) + G^{\standardstate}(\ce{N2(g)})\}\nonumber \\ 
+    \vspace{0.3cm}
+    & = 2 * -16,4 \; (\text{kJ/mol}) - \{3 * 0\; (\text{kJ/mol}) + 0\; (\text{kJ/mol})\} \nonumber \\
+    \vspace{0.3cm}
+    & = -32,8\; \text{kJ/mol}) \nonumber
+\end{flalign}
+$\Delta G^{\standardstate}$ er systemets tilvækst i Gibbs-energi pr. mol reaktion, hvis samtlige reaktionsdeltagere er i standardtilstanden under hele det betragtede reaktionsforløb. \\
+Den negative værdi $\Delta G^{\standardstate}$ for viser, at systemets Gibbs-energi aftager, når $\ce{H2}$ og $\ce{N2}$ omdannes til $\ce{NH3}$ i den betragtede »standardblanding« ved 298 K. Heraf følger, at reaktionen kan forløbe mod højre. Imidlertid er reaktionshastigheden så uendelig lille, at reaktionen i praksis ikke forløber ved 298 K. Men hvis man kunne finde en effektiv katalysator, ville det være muligt at få den til at forløbe.
+}
+
+\ex{Beregning af molar tilvækst i standard Gibbs-energi}{
+Vi betragter nu reaktionen:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        ~ & $\ce{N2O4(g)}$ & $\ce{->}$ & $\ce{2NO2(g)}$ \\ 
+        ~ & 1 bar & ~ & 1 bar \\
+        $G^{\standardstate}/(\text{kJ/mol})$ & 99,8 & ~ & 51,3 
+    \end{tabular}
+\end{table}
+Den molare tilvækst i standard Gibbs-energi beregnes:
+\begin{flalign}
+    \Delta G^{\standardstate} & = 2 * G^{\standardstate}(\ce{NO2(g)}) - G^{\standardstate}(\ce{N2O4(g)}) \nonumber \\
+    & = 2 * 51,3\; (\text{kJ/mol}) - 2,8\; (\text{kJ/mol}) = 175,8\; (\text{kJ/mol}) \nonumber
+\end{flalign}
+Den positive værdi for $\Delta G^{\standardstate}$ fortæller os, at denne reaktion ikke kan forløbe mod højre i en »standardblanding« ved 298 K. Reaktion mod højre ville nemlig forøge systemets Gibbs-energi. I stedet kan reaktionen forløbe mod venstre, og det gør den.\\
+}
+
+
+\ex{Beregning af af ligevægtskonstanten ved brug af Gibbs-energi}{
+Beregn ligevægtskonstanten ved 298 K (25 °C) for reaktionen:
+\begin{flalign}
+    \ce{2NO(g) + O2(g) -> 2NO2(g)} \nonumber
+\end{flalign}
+\textit{Løsning:} Først findes værdierne for molar standard Gibbs-energi i et
+passende tabelværk, og $\Delta G^{\standardstate}$ beregnes:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccccc}
+        ~ & $\ce{2NO(g)}$ & + &$\ce{O2(g)}$ & $\ce{->}$ & $\ce{2NO2(g)}$ \\ 
+        $\Delta G^{\standardstate}/(\text{kJ/mol})$ & 87,6 & ~ & 0 & ~ & 51,3 
+    \end{tabular}
+\end{table}
+\vspace{-0.8cm}
+\begin{flalign}
+    \Delta G^{\standardstate} & = 2 * G^{\standardstate}(\ce{NO2}) - \{2 * G^{\standardstate} \nonumber (\ce{NO})+G^{\standardstate}(\ce{O2})\} \\ \nonumber 
+    & = 2 * 51,3\; \text{kJ/mol} - \{ 2 * 87,6\; \text{kJ/mol} + 0\; \text{kJ/mol} \} = -72,6\; \text{kJ/mol} \nonumber
+\end{flalign}
+Da enheden her er kJ/mol, og gaskonstanten indgår med enheden $\frac{\text{J}}{\text{mol $\cdot$ K}}$, skal vi huske at omregne fra kJ til J. \\
+Herefter beregnes ligevægtskonstanten:
+\begin{equation}
+    \ln(K)=\frac{\Delta G^{\standardstate}}{R * T} = \frac{-(-72,6*10^3\; \text{J/mol})}{8,314\; \frac{\text{J}}{\text{mol $\cdot$ K}} * 298 \textit{K}} \nonumber
+\end{equation}
+\vspace{-0.5cm}
+\begin{equation}
+    K=5,3 * 10^{12} \nonumber
+\end{equation}
+Ved udregningen får vi ligevægtskonstanten som et ubenævnt tal. For at finde enheden opskrives ligevægtsloven for reaktionen:
+\begin{equation}
+    K=\frac{p(\ce{NO2})^2}{p(\ce{NO})^2 * p(\ce{O2})} \nonumber
+\end{equation}
+Af brøken kan man se, at enheden for \textit{K} må være bar${}^{-1}$, og den tilføjesderefter til talværdien. Facit bliver således:
+$$K=5,3*10^{12} \; \text{bar}^{-1}$$
+Ligevægtskonstanten er meget stor. Det betyder, at reaktionen kan
+forløbe så godt som fuldstændigt.
+}
+
+\newpage
+\twocolumn
+\chapter{Reaktionskinetik}
+\section{Formler}
+
+Reaktionshastigheden, v, er defineret som faldet i koncentrationen af reaktanten A pr. tid:
+\begin{flalign}
+    v=\frac{ \, d[A]}{\, dt} &&
+\end{flalign}
+Generelt afhænger reaktionshastigheden af koncentrationen af reaktanten \textit{A} på følgende måde:
+\begin{flalign}
+    v=k*[A]^n &&
+\end{flalign}
+$k$ er hastighedskonstanten, og $n$ er reaktionsordenen, hvilket normaltvist ikke kan være større end 2. \\
+Når man sammenkæder definitionen på reaktionshastighed
+med det generelle hastighedsudtryk, får man for reaktioner af
+typen "A —> produkter" en differentialligning: 
+\begin{flalign}
+    -\frac{d[A]}{dt}=k*[A]^n &&
+\end{flalign}
+Differentialligningerne kan løses. Løsningerne fortæller, hvordan [A] afhænger af tiden samt påvirkningen af startbetingelserne. Heraf startkoncentrationen og hvordan hastighedskonstanten bla. påvirkes af temperatur eller tilstedeværelsen af en katalysator. Udledningen ser således ud:
+\begin{flalign}    
+    -\frac{d[A]}{dt}=k*[A]^n \Rightarrow \frac{1}{[A]^n}d[A]=-k*dt \nonumber && \\
+    \int_{[A]_0}^{[A]} \frac{1}{[A]^n}d[A]=-\int_0^t k*dt && \\
+    \int_{[A]_0}^{[A]} \frac{1}{[A]^n}d[A]=-k*t && 
+\end{flalign}
+Det kan forekomme at flere reaktanter i en reaktion, hvilket kan skabe problemer ved bestemmelsen af reaktionsorden.
+\begin{flalign}    
+    a A+b B \longrightarrow produkter \nonumber && \\
+    v = -\frac{1}{a}*\frac{d[A]}{dt} =-\frac{1}{b}*\frac{d[B]}{dt}=k*[A]^n*[B]^m &&
+\end{flalign}
+Dette skyldes, at alle reaktanters koncentration ændrer sig, og det er derfor nødvendigt at følge koncentrationen for dem alle. Bemærk konstanterne \textit{a} og \textit{b}, idet de betegner antallet af det enkelte reaktant, da reaktioner ikke altid blot et A og et B.
+
+\begin{flalign}    
+    k = A*\exp{}\left( \frac{-E_a}{R*T}\right )&&
+\end{flalign}
+Arrhenius-ligningen beskriver hastighedskonstantens temperaturafhængighed og afhængigheden af aktiveringsenergien for reaktionen. A er konstant, har samme enhed som hastighedskonstanten, og kaldes den præeksponentielle faktor. R er idealgaskonstanten og T er temperaturen i kelvin. A, den præeksponentielle faktor, kan ændres i tilværelsen af en katalysator eller inhibitor.
+
+\begin{wraptable}{r}{5.5cm}
+    \caption{Udledte variable der er varierende af reaktionsorden}
+    \label{wrap-tab:Reaktionsordener}
+    \bgroup
+    \def\arraystretch{2}%
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{\textit{n}}              & 
+        \multicolumn{1}{c|}{\textit{[A]}}           & 
+        \multicolumn{1}{c|}{\textit{k}}             & 
+        \multicolumn{1}{c|}{$T_\frac{1}{2}$}        \\ 
+
+        \hline
+        n=0     & $[A]_0-k*t$  & $-\frac{[A]_2-[A]_1}{t_2-t_1}$ & $\frac{[A]_0}{2k}$\\
+        n=1     & $[A]_0*\exp (-k*t)$ & $-\frac{ln[A]_2-ln[A]_1}{t_2-t_1}$ & $\frac{ln(2)}{k}$ \\
+        n=2     & $\left (\frac{1}{[A]_0}-k*t\right )^{-1}$ & $-\frac{1}{t}\left (\frac{1}{[A]_2}-\frac{1}{[A]_1} \right )$  & $\frac{1}{k*[A]_0}$ \\
+        n=3     & $\frac{[A]_0}{\sqrt{-2*[A]_0^2*k*t + 1}}$ 
+        & $-\frac{\frac{[A]_0^2}{A^2} - 1}{2*[A]_0^2*t}$ & $\frac{3}{2*[A]_0^2*k}$ \\
+        \hline
+
+    \end{tabular}
+    \egroup
+\end{wraptable}
+
+
+\onecolumn
+\section{Eksempler}
+
+Alle eksempler i denne sektion er taget fra Basis kemi A.
+
+\ex{Bestemmelse af reaktionsorden}{}
+    \begin{wraptable}{r}{5.5cm}
+    \caption{Samhørendeværdier af $t$ og [Azo] for reaktionen mellem azorubin og hypochlorit.}
+    \label{wrap-tab:Azo_table}
+        \begin{tabular}{|c|c|}
+             \hline
+             t / s & [Azo / M] \\
+             \hline
+             0  & 0,0001000 \\
+             6  & 0,0000865 \\
+             12 & 0,0000745 \\
+             18 & 0,0000634 \\
+             24 & 0,0000541 \\
+             30 & 0,0000464 \\
+             36 & 0,0000393 \\
+             42 & 0,0000334 \\
+             48 & 0,0000285 \\
+             54 & 0,0000244 \\
+             60 & 0,0000210 \\
+             66 & 0,0000180 \\
+             \hline
+        \end{tabular}
+    \end{wraptable}
+    Når en opløsning af det røde farvestof azorubin tilsættes Klorin, forsvinder den røde farve langsomt på grund af en reaktion mellem azorubin og hypochlorit (se \ref{fig:billede_af_azo} I det følgende antager vi, at den aktuelle stofmængdekoncentration af hypochlorit er konstant under reaktionen. Vi skal nu bestemme reaktionsordenen med hensyn til azorubin.
+    Med et spektrofotometer er det let at følge affarvningen og derved bestemme den aktuelle stofmængdekoncentration af azorubin som funktion af tiden. Der er målt i 66 sekunder, og resultaterne er angivet i \ref{wrap-tab:Azo_table} Vi benytter [Azo] for den aktuelle stofmængdekoncentration af azorubin.
+    
+    \begin{figure}[h]
+        \includegraphics[width=0.65\textwidth, left]{images/figur_35_fra_basis_kemi_a.jpg}
+        \caption{En opløsning af azorubin tilsættes Klorin, hvorefter opløsningens røde farve langsomt forsvinder.}
+        \label{fig:billede_af_azo}
+    \end{figure}
+    \vspace{-2.8cm}
+    $$ $$
+    $$ $$
+    $$ $$
+    Vi starter med at undersøge, om reaktionen er af nulte orden. Måleresultaterne afbildes i et ($t$,[Azo])-diagram, se figur 36. Hvis reaktionen er af nulte orden, skal målepunkterne tilnærmelsesvis ligge langs en ret linje med negativ hældningskoefficient, jævnfør funktionsudtrykket for en nulte ordens reaktion:
+    \begin{equation}
+        [Azo]=-k*t+[Azo]_0 \nonumber
+    \end{equation}
+    Der udføres lineær regression på datasættet (t,[Azo]), og i figur 36 er den fremkomne tendenslinje indtegnet. Forskriften for tendenslinien er:
+    \begin{flalign}
+        \indent [Azo] = -1,22*10^{-6} \text{M/s} * \text{t} + 8,92 * 10^{-5} \text{M} && 
+        r^2=0,9502 & \nonumber
+    \end{flalign}
+    Betragter man afbildningen, ses det, at punkterne ikke følger den lineære sammenhæng, idet målingerne ved start og slut ligger over tendenslinjen, hvorimod de midterste målinger ligger under tendenslinjen. Dette kan ikke henføres til tilfældige afvigelser. Det vurderes umiddelbart, at reaktionen \textit{ikke} er af nulte orden.
+    \pagebreak
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/Basiskemi_a_figur_36.png}
+        \caption{Afbildning af [Azo] som funktion af tiden $t$. Der er udført lineær regression på datasættet vist i \ref{wrap-tab:Azo_table}}
+        \label{fig:Azo_lineær}
+    \end{figure}
+    
+    Vi vil nu undersøge, om reaktionen er af første orden. Der er udført eksponentiel regression på datasættet ($t$,[Azo]), jævnfør funktionsudtrykket for en første ordens reaktion:
+    $$[Azo] = [Azo]_0 \, e^{-k*t}$$
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/Basiskemi_a_figur_37.png}
+        \caption{Afbildning af [Azo] som funktion af tiden $t$. Det er undersøgt, om datasættet vist i \ref{wrap-tab:Azo_table} følger en eksponentiel sammenhæng.}
+        \label{fig:Azo_eksponentiel}
+    \end{figure}
+    
+    I \ref{fig:Azo_eksponentiel} er den fremkomne tendenslinje indtegnet. Forskriften for tendenslinjen er:
+    \begin{flalign}
+        \indent [Azo] = 1,01*10^{-4}\; \text{M} \, * e^{-0,0262 \text{s}^{-1}*\text{t}} && 
+        r^2=0,9999 & \nonumber
+    \end{flalign}
+    Betragter man afbildningen, ses det, at punkterne næsten perfekt følger den eksponentielle sammenhæng. Der er ikke umiddelbart nogen målinger, som afviger systematisk. De små afvigelser er helt tilfældigt fordelt. Det vurderes umiddelbart, at reaktionen er af første orden. I stedet for en afbildning af ($t$,[Azo]) kan man også vælge at lave en afbildning af ($t$,ln[Azo]) og udføre lineær regression, jævnfør funktionsudtrykket:
+    
+    \begin{equation}
+        \ln[Azo] = -k*t+\ln[Azo]_0 \nonumber
+    \end{equation}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.55\textwidth]{images/Basiskemi_a_figur_38.png}
+        \caption{Afbildning af ln[Azo] som funktion af tiden $t$. Der er udført lineær regression på datasættet}
+        \label{fig:ln_Azo}
+    \end{figure}
+    \pagebreak
+    I \ref{fig:ln_Azo} er der udført lineær regression på datasættet ($t$,ln[Azo]), og den fremkomne tendenslinje er indtegnet. Forskriften for tendenslinjen er:
+    \begin{flalign}
+       \indent \ln[Azo] = -0,0262\, \text{s}^{-1}*t-9,20 && 
+       r^2=0,9984 & \nonumber
+    \end{flalign}
+    Betragter man afbildningen, ses det, at punkterne næsten perfekt følger den lineære sammenhæng. Der er ikke umiddelbart nogen målinger, som afviger systematisk. De små afvigelser er helt tilfældigt fordelt. Det vurderes naturligvis også ud fra denne type regressionsanalyse, at reaktionen er af første orden.
+    For en god ordens skyld undersøger vi også, om reaktionen kunne være af anden orden. Måleresultaterne afbildes i et $(\frac{1}{[Azo]})$ diagram. Hvis reaktionen skal være af anden orden, skal målepunkterne tilnærmelsesvis ligge langs en ret linje med positiv hældningskoefficient, jævnfør funktionsudtrykket:
+    
+    \begin{equation}
+        \indent \frac{1}{[Azo]} = k*t+\frac{1}{[Azo]_0} \nonumber
+    \end{equation}
+    I figur \ref{fig:reciprok_Azo} er der udført lineær regression på datasættet $(\frac{1}{[Azo]})$ og den fremkomne tendenslinje er indtegnet. Forskriften for tendenslinjen er:
+    \begin{flalign}
+       \indent \frac{1}{[Azo]} = 672\, \text{M}^{-1} * \text{s}^{-1}*t+4,95*10^{3}\, \text{M}^{-1} && 
+       r^2=0,9481 & \nonumber
+    \end{flalign}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.55\textwidth]{images/Basiskemi_a_figur_39.png}
+        \caption{Afbildning af $(\frac{1}{[Azo]})$ som funktion af tiden $t$. Der er udført lineær regression på datasættet}
+        \label{fig:reciprok_Azo}
+    \end{figure}
+    \pagebreak
+    Betragter man afbildningen, ses det, at punkterne ikke følger den lineære sammenhæng, idet målingerne ved start og slut ligger over tendenslinjen, hvorimod de midterste målinger ligger under tendenslinjen. Denne type afvigelser kan ikke henføres som tilfældige afvigelser. Det vurderes umiddelbart, at reaktionen ikke er af anden orden. Ud fra undersøgelsen kan vi konkludere, at affarvningen af azorubin i det nævnte eksperiment er en første ordens reaktion, og vi får følgende:
+    
+    \begin{flalign}
+         [Azo] = 1,01*10^{-4} * \, \text{M} * e^{-0,0262\; \text{s}^{-1}*t} \nonumber \\ 
+        \ln[Azo] = -0,0262\; \text{s}^{-1}*t*t-9,20 \nonumber
+    \end{flalign}
+    dvs. hastighedskonstanten for reaktionen er $k = 0,0262 \text{s}^{-1}$ Hastighedsudtrykket for affarvningen af azorubin kan nu opskrives:
+    \begin{flalign}
+        v = -0,0262\; \text{s}^{-1}*[Azo] \nonumber
+    \end{flalign}
+    Andre faktorer kan have indflydelse på hastighedsudtrykket, fx surhedsgrad, stofmængdekoncentrationen af hypochlorit i den anvendte Klorin og temperaturen. Det vil kræve yderligere undersøgelser at klarlægge disse faktorers betydning.\\\\
+    
+
+    
+\newpage
+\twocolumn
+\chapter{Spektroskopi}
+\section{Formler}
+
+\begin{table}[]
+    \begin{tabular}{ l l l}
+    \multicolumn{3}{l}{\textbf{Spektroskopi}} \\
+        \hline  
+        $A$ & absorbans & $(\text{ingen})$ \\
+        $\varepsilon_\lambda$ & absorptionskoefficient & \\
+        $ $ & (ekstinktionkoeffcient) & $(\text{M}\inv * \text{cm}\inv$ \\ 
+        $ $ & $ $ & = $\text{L}/(\text{mol}*\text{cm}))$ \\
+        $l$ & lysvej (kuvettebredde) & $(\text{cm})$ \\
+        $E$ & energi & $(\text{J})$ \\
+        $f$ & frekvensen & $(\text{Hz}=\text{s}\inv)$ \\
+        $c$ & lysets fart & $(\text{m}/\text{s})$ \\
+        $\lambda$ & bølgelængde & $(\text{m})$ \\
+        $\tau$ & transmittans & $(\text{ingen, \%})$ \\
+        $\lambda ^{-1}$ & bølgetal & $(\text{cm}\inv)$ \\
+        $\delta$ & kemisk skift & $(\text{ingen, ppm})$ \\
+        $J$ & koblingskonstant & $(\text{Hz})$ \\
+    \end{tabular}
+    \caption{Symboler og deres enheder}
+    \label{tab:spektroskopi_table}
+\end{table}
+
+\begin{flalign}
+    A = \varepsilon_\lambda * [A] * l &&
+\end{flalign}
+Lambert-Beers lov. Når lys sendes gennem en opløsning af et stof $A$, er absorbansen lig med produktet af den molare absorptionskoefficient (ekstinktionskoefficient), stoffets aktuelle koncentration og lysets vejlængde (kuvettebredden) gennem stoffet.
+
+\begin{flalign}
+    E_{foton} = h * f &&
+\end{flalign}
+En fotons energi er lig med produktet af Planck-konstanten og lysets frekvens
+
+\begin{flalign}
+    E_{foton} = E_{høj} - E_{lav} &&
+\end{flalign}
+Den foton, der udsende ved en overgang fra en stationær tilstand med energien $E_{høj}$ til en overgang med energien $E_{lav}$ er lig med forskellen i energi mellem de to tilstande. 
+
+\begin{flalign}
+    c = \frac{\lambda}{f} &&
+\end{flalign}
+Lysets udbredelsesfart er lig med produktet af lysets bølgelængde og lysets frekvens.
+
+\begin{flalign}
+    \tau = \frac{I}{I_0}&&
+\end{flalign}
+Transmittansen er lig med forholdet mellem intensiteten af strålingen efter absorption divideret med intensiteten af strålingen før absorption
+
+\begin{flalign}
+    \delta = \frac{f_{resonans} - f_{TMS}}{f_{TMS}} &&
+\end{flalign}
+Det kemiske skift for en resonanslinje er lig med den relative forskydning af linjens resonansfrekvensen i forhold til resonansfrekvensen for tetramethylsilan, TMS. 
+
+\begin{flalign}
+    J_{ax} = f_{NMR} * \Delta \delta &&
+\end{flalign}
+Koblingskonstanten er lig med produktet af NMR-spektrometerets frekvens og forskellen i kemisk skift. 
+
+\begin{flalign}
+    DBE = \frac{(2c+2)-(h-n)}{2} &&
+\end{flalign}
+Antallet af dobbeltbindingsækvivalenter i et organisk molekyler kan beregnes ud fra den viste formel, $c$ er antallet af carbonatomer, $h$ antallet af hydrogenatomer og $n$ er antallet af nitrogenatomer. 
+\newpage
+\onecolumn
+
+
+\chemfig{H-C(-[2]H)(-[6]H)-C(-[0]H)(-[2]H)-[6]H}
+
+
+
+\newpage
+
+\quickwordcount{main}
+\quickcharcount{main}
+
+There are \thechar characters and approximately \theword spaces.
+That makes approximately \the\numexpr\theword+\thechar\relax\ characters total.
+
+\end{document}
